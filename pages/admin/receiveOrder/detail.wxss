@@ -1,0 +1,5 @@
+/* pages/admin/receiveOrder/detail.wxss */
+.card{
+  width:92%;
+  margin-left: 4%;
+}

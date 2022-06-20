@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/profile/profile",
+    "pages/profile/userData/userData",
+    "components/navbar/cu-costom",
+    "pages/profile/bill/bill",
+    "pages/profile/balance/balance",
+    "pages/profile/about/about",
+    "pages/index/order/order",
+    "pages/admin/admin",
+    "pages/admin/receiveOrder/receiveOrder",
+    "pages/admin/receiveOrder/detail"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "回收",
+    "backgroundTextStyle": "light",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color":"#8a8a8a",
+    "selectedColor":"#8a8a8a",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "./asstes/img/tabbar/home.png",
+        "selectedIconPath": "./asstes/img/tabbar/home-active.png",
+        "text":"首页"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./asstes/img/tabbar/order.png",
+        "selectedIconPath": "./asstes/img/tabbar/order-active.png",
+        "text":"订单"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "./asstes/img/tabbar/profile.png",
+        "selectedIconPath": "./asstes/img/tabbar/profile-active.png",
+        "text":"我的"
+      }
+    ]
+  },
+  "usingComponents": {
+    "cu-custom": "components/navbar/cu-costom"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

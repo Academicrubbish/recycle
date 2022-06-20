@@ -1,0 +1,55 @@
+<cu-custom isBack="{{true}}"><view slot="center">我的余额</view></cu-custom>
+<view class="cu-card case no-card bg-image">
+  <view class="cu-item shadow">
+    <view class="image">
+      <image src="/asstes/img/profile/balance.png" mode="widthFix"></image>
+    </view>
+  </view>
+</view>
+
+<view class="cu-list menu cu-card">
+  <view class="cu-item" style="background-color: darkcyan;">
+    <view class="content flex-sub">
+      <view class="text-grey text-sm text-white">总资产(CNY)</view>
+
+      <view class="text-grey flex justify-between text-white" style="padding-top:10px;font-size:30px;">{{balance}}
+        <view class="text-gray text-lg text-white" bindtap="withdraw">
+          提现<text class="cuIcon-right lg"/>
+        </view>
+      </view>
+
+      <view class="text-gray text-sm flex justify-between text-white" style="padding-top: 10px;">
+        今日收益：￥{{todayMoney}}
+        <view class="text-gray text-sm text-white">
+          累计收益：￥{{addMoney}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view style="display:flex;align-items: center;">
+  <view style="font-size:20px;margin-left: 4%;width: 46%;" class="text-green">收益明细</view>
+  <view class="text-gray" style="margin-right: 4%;width: 46%;text-align:right;"><text class="cuIcon-icon lg"/>查看全部</view>
+</view>
+
+<view class="cu-list menu cu-card">
+  <view class="cu-item" wx:for="{{withdraw}}" wx:key>
+    <view class="content flex-sub">
+
+      <view class="flex justify-between" style="padding-top:10px;font-size:20px;">{{item.bigName}}
+        <view class="text-red text-lg" bindtap="withdraw">
+          <text class="cuIcon-add lg"/>{{item.price}}
+        </view>
+      </view>
+
+      <view class="text-gray text-sm flex justify-between" style="padding-top: 10px;">
+        {{item.smallName}}回收金到账
+        <view class="text-gray text-sm">
+          {{item.date}} {{item.time}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='cu-tabbar-height'></view>

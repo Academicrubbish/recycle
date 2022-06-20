@@ -1,0 +1,55 @@
+<cu-custom isBack="{{true}}"><view slot="center">详情页</view></cu-custom>
+<view class="cu-list menu sm-border card-menu margin-top">
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-grey">姓名：{{list.name}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-grey">电话：{{list.tel}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-grey">上门时间：{{list.date}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-grey">上门地址：{{list.address}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-grey">类别：{{list.category}}</text>
+    </view>
+  </view>
+  <view class="cu-item">
+    <view class="content">
+      <text class="text-grey">重量：{{list.weight}}</text>
+    </view>
+  </view>
+</view>
+<view class="card">
+  <view class="cu-form-group margin-top">
+		<view class="title text-blue">实际回收时间：</view>
+		<view>{{date}}</view>
+	</view>
+  <view class="cu-form-group">
+		<view class="title text-cyan">实际回收物品：</view>
+		<input type="text" model:value="{{goods}}" bindinput="aaa"/>
+	</view>
+  <view class="cu-form-group">
+		<view class="title text-cyan">实际重量(kg)：</view>
+		<input type="text" model:value="{{weight}}" bindinput="aaa" placeholder="直接填数字，不要写其他的"/>
+	</view>
+  <view class="cu-form-group">
+		<view class="title text-green">用户获得金额：</view>
+		<input type="text" model:value="{{balance}}" bindinput="aaa" placeholder="直接填数字，不要写其他的"/>
+	</view>
+</view>
+
+<view class="padding flex flex-direction">
+  <button class="cu-btn bg-green lg round" bindtap="finish">完成订单</button>
+</view>

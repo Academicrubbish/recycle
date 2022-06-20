@@ -1,0 +1,57 @@
+<cu-custom><view slot="center">用户</view></cu-custom>
+
+<view class="cu-card case">
+  <view class="cu-item shadow">
+    <view class="cu-list menu-avatar">
+      <view class="cu-item" style="height: 100px;">
+        <view class="cu-avatar round lg" style="background-image:url({{imageUrl}});"></view>
+        <view class="content">
+          <view class="text-grey">{{name}}</view>
+          <view class="text-gray text-sm flex justify-between">
+            {{motto}}
+          </view>
+        </view>
+        <view class="action" style="width: 80px;" wx:if="{{!condition}}">
+          <button class="cu-btn round shadow text-sm bg-green" bindtap="login">授权登录</button>
+        </view>
+        <view class="action" style="width: 80px;" wx:if="{{condition}}">
+          <button class="cu-btn round shadow text-sm bg-gray" bindtap="go" id="0">编辑资料</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="cu-list menu sm-border card-menu margin-top">
+  <view class="cu-item arrow" bindtap="go" id="1">
+    <view class="content">
+      <text class="cuIcon-sponsorfill text-orange"></text>
+      <text class="text-grey">我卖出的</text>
+    </view>
+  </view>
+  <view class="cu-item arrow" bindtap="go" id="2">
+    <view class="content">
+      <text class="cuIcon-rechargefill text-yellow"></text>
+      <text class="text-grey">用户余额</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <button class="cu-btn content" open-type="{{condition==true?'contact':''}}">
+      <text class="cuIcon-communityfill text-olive"></text>
+      <text class="text-grey">联系我们</text>
+    </button>
+  </view>
+  <view class="cu-item arrow" bindtap="go" id="3">
+    <view class="content">
+      <text class="cuIcon-friendfill text-green"></text>
+      <text class="text-grey">关于我们</text>
+    </view>
+  </view>
+  <view class="cu-item arrow" bindtap="checkUpdateVersion">
+    <view class="content">
+      <text class="cuIcon-settingsfill text-cyan"></text>
+      <text class="text-grey">更新小程序</text>
+    </view>
+  </view>
+  <view class="version text-gray">Version {{version}}(正式版会正常显示版本号)</view>
+</view>

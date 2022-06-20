@@ -1,0 +1,8 @@
+<cu-custom isBack="{{true}}"><view slot="center">关于我们</view></cu-custom>
+
+<view class="padding flex flex-direction" wx:if="{{manage}}">
+  <button class="cu-btn bg-green lg round" bindtap="goAdmin">进入管理端</button>
+</view>
+<view class="padding flex flex-direction" wx:if="{{delivery}}">
+  <button class="cu-btn bg-green lg round" bindtap="goReceiveOrder">进入接单页</button>
+</view>

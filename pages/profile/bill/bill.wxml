@@ -1,0 +1,31 @@
+<cu-custom isBack="{{true}}"><view slot="center">我卖出的</view></cu-custom>
+<view wx:for="{{sellList}}" wx:key>
+  <view class="cu-timeline" bindtap="showModal" data-target="bottomModal">
+    <view class="cu-time">{{item.date}}</view>
+    <view class="cu-item">
+      <view class="content">
+        <view class="cu-capsule radius">
+          <view class="cu-tag bg-{{item.color}}">{{item.period}}</view>
+          <view class="cu-tag line-purple">{{item.time}}</view>
+        </view>
+        <view class="margin-top">卖出 "{{item.smallName}}" {{item.count}}，获利{{item.price}}元</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='cu-tabbar-height'></view>
+
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+      <view class="action text-green" bindtap="go">投诉</view>
+      <view class="action text-blue" bindtap="hideModal">确定</view>
+    </view>
+    <view class="padding-xl">
+      <view>回收人员：只是</view>
+      <view>微信：yydsChuangGieGie</view>
+    </view>
+    <view style="height: 60px;"></view>
+  </view>
+</view>

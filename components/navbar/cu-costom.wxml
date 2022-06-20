@@ -1,0 +1,14 @@
+<view style="background-color: white;" class="nav">
+  <view style="height: {{statusHeight + 'px'}}"></view>
+  <view style="height: {{menuHeight + 'px'}};" class="menu">
+    <view bindtap="BackPage" wx:if="{{isBack}}" class="left">
+      <text class="cuIcon-back lg"></text>返回
+    </view>
+    <view wx:if="{{!isBack}}" class="left"></view>
+    <view class="center">
+      <slot name="center"></slot>
+    </view>
+    <view class="right"></view>
+  </view>
+</view>
+<view style="height: {{(statusHeight+menuHeight) + 'px'}}"></view>

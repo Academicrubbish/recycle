@@ -1,0 +1,48 @@
+.home-list {
+  margin-top: 10px;
+  width: 96%;
+  margin-left: 2%;
+}
+.list-item{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.announce{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70rpx;
+  height: 50rpx;
+  border-radius: 15rpx;   
+  background-color: #f26529;
+  transform: skewX(-20deg);
+}
+.swiper-item{
+  margin-left: 10rpx;
+  width: 600rpx;
+  height: 50rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.btn{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.btn-1,btn-3{
+  width: 27%;
+}
+.btn-2{
+  width: 46%;
+}
+.btn-1 image{
+  height: 100px;
+  width: 100px;
+}
+.btn-3 image{
+  height: 50px;
+  width: 50px;
+  margin-left: 27px
+}

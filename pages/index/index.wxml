@@ -1,0 +1,56 @@
+
+<cu-custom><view slot="center">回收预约</view></cu-custom>
+
+<view>
+  <scroll-view scroll-x class="bg-white nav">
+    <view class="flex text-center">
+      <view class="cu-item flex-sub {{index==TabCur?'text-orange cur':''}}" wx:for="{{list}}" wx:key bindtap="tabSelect" data-id="{{index}}" style="height: 75px;">
+        <view style="height: 50%;"><image style="width: 50px;height: 50px;" src="{{item.image}}" /></view>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="margin-top">
+  <scroll-view scroll-y="true" style="height: 300px" class="page show bg-white card">
+    <view class="cu-list menu card">
+      <view class="cu-item" wx:for="{{goodsList[TabCur]}}" wx:key>
+        <view class="content padding-tb-sm">
+          <view>
+            <text class="margin-right-xs"></text>
+            {{item.name}}
+          </view>
+          <view class="text-gray text-sm">
+            <text class="margin-right-xs"></text>
+            {{item.name}}
+          </view>
+        </view>
+        <view class="action">
+          <text class="text-grey text-sm">参考价{{item.price}}元/公斤</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view class="cu-list menu card-menu margin-top">
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 回收要求
+    </view>
+  </view>
+  <view class="cu-list grid col-3 no-border">
+    <view class="cu-item" wx:for="{{iconList}}" wx:key>
+      <view><image style="width: 30px;height: 30px;" src="{{item.imgurl}}" />
+      </view>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</view>
+
+<view>
+  <view class="padding flex flex-direction">
+    <button class="cu-btn bg-green lg round" bindtap="go">预约回收</button>
+  </view>
+</view>

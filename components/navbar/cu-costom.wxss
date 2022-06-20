@@ -1,0 +1,19 @@
+.menu {
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+.right,.center {
+  width: 33.3%;
+}
+.left{
+  width: 33.3%;
+  text-align: left;
+  padding-left: 4%;
+}
+.nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}

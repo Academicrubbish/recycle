@@ -1,0 +1,7 @@
+.bg-image{ 
+  margin-top: 30%;
+  width : 100%; 
+  position: fixed;  
+  z-index: -1;
+  opacity: 0.3;
+}

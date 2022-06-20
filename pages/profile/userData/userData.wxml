@@ -1,0 +1,22 @@
+<cu-custom isBack="{{true}}"><view slot="center">编辑资料</view></cu-custom>
+
+<view class="cu-list menu card-menu margin-top">
+  <view class="cu-item">
+    <view class="content" style="text-align: center;">
+      <text class="text-grey">修改信息</text>
+    </view>
+  </view>
+  <view class="cu-form-group">
+		<view class="title">签名：</view>
+		<input value="{{motto}}" bindinput="changeMotto"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">手机：</view>
+		<input value="{{tel}}" bindinput="changeTel"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">回收地址：</view>
+		<input value="{{address}}" bindinput="changeAddress"></input>
+	</view>
+</view>
+<button class="cu-btn bg-green button" bindtap="save">保存</button>

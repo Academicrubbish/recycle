@@ -1,0 +1,5 @@
+.card{
+  width:92%;
+  margin-left: 4%;
+  border-radius: 20rpx;
+}
